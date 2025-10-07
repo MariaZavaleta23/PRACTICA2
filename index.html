@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Notas Rápidas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Notas Rápidas</h1>
+            <p>Organiza tus ideas de manera simple y eficiente</p>
+        </header>
+        
+        <main>
+            <section class="add-note-section">
+                <form id="noteForm" class="note-form">
+                    <div class="form-group">
+                        <label for="noteTitle">Título de la nota:</label>
+                        <input 
+                            type="text" 
+                            id="noteTitle" 
+                            name="noteTitle" 
+                            placeholder="Escribe un título para tu nota..."
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="noteContent">Contenido:</label>
+                        <textarea 
+                            id="noteContent" 
+                            name="noteContent" 
+                            placeholder="Escribe el contenido de tu nota aquí..."
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notePriority">Prioridad:</label>
+                        <select id="notePriority" name="notePriority">
+                            <option value="low">Baja</option>
+                            <option value="medium" selected>Media</option>
+                            <option value="high">Alta</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-add">➕ Agregar Nota</button>
+                </form>
+            </section>
+            
+            <section class="notes-section">
+                <div class="notes-header">
+                    <h2>Mis Notas</h2>
+                    <div class="notes-controls">
+                        <button id="clearAllBtn" class="btn-clear">🗑️ Limpiar Todo</button>
+                        <span id="notesCount" class="notes-count">0 notas</span>
+                    </div>
+                </div>
+                
+                <ul id="notesList" class="notes-list">
+                    <!-- Las notas se agregarán dinámicamente aquí -->
+                </ul>
+                
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <h3>No hay notas aún</h3>
+                    <p>¡Agrega tu primera nota usando el formulario de arriba!</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Gestor de Notas Rápidas - Desarrollado con ❤️</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
